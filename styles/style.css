@@ -111,3 +111,30 @@ header span {
     display: none;
   }
 }
+
+footer {
+  background-color: #222;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+footer .social-icons {
+  display: flex;
+  justify-content: center;
+  column-gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+footer .icon {
+  width: 32px;
+  height: 32px;
+  fill: currentColor;
+  transition: transform 0.2s ease;
+}
+
+footer .icon:hover {
+  transform: scale(1.1);
+  filter: brightness(1.4);
+}

@@ -5,3 +5,5 @@ navButton.addEventListener('click', () => {
   navButton.classList.toggle('show');
   navBar.classList.toggle('show'); 
 });
+
+document.getElementById("lastModified").textContent = document.lastModified;
