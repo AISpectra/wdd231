@@ -1,13 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Normalize CSS Test</title>
-  <link rel="stylesheet" href="styles/normalize.css">
-  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="WDD 231 Course Home Page for Samuel Expósito Ruiz" />
+  <meta name="author" content="Samuel Expósito Ruiz" />
+  <title>WDD 231 - Course Home Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/small.css" />
+  <link rel="stylesheet" href="styles/larger.css" />
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/courses.js" defer></script>
 </head>
 <body>
-  <h1>Hola, mundo</h1>
-  <p>Este es un párrafo de prueba.</p>
+  <header>
+    <img src="images/logo.svg" alt="Site Logo" />
+    <span>Samuel Expósito Ruiz</span>
+    <button class="hamburger" id="nav-button" aria-label="Toggle Navigation"></button>
+  </header>
+
+  <nav class="navigation" id="nav-bar">
+    <ul>
+      <li class="current"><a href="#">Home</a></li>
+      <li><a href="#">Chamber</a></li>
+      <li><a href="#">Final</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Home</h1>
+
+    <section>
+      <h2>About Me</h2>
+      <p>This is the WDD 231 course homepage for Samuel Expósito Ruiz.</p>
+    </section>
+
+    <section>
+      <h2>Certificate Courses</h2>
+      <div id="course-list"></div>
+      <div id="filter-buttons">
+        <button id="all">All</button>
+        <button id="wdd">WDD Courses</button>
+        <button id="cse">CSE Courses</button>
+      </div>
+      <p>Total Credits: <span id="total-credits">0</span></p>
+    </section>
+
+    <section>
+      <h2>Resources</h2>
+      <ul>
+        <li><a href="https://github.com">GitHub</a></li>
+        <li><a href="https://linkedin.com">LinkedIn</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://github.com" target="_blank" aria-label="GitHub">
+        <img src="images/github.svg" alt="GitHub icon" class="icon" />
+      </a>
+      <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+        <img src="images/linkedin.svg" alt="LinkedIn icon" class="icon" />
+      </a>
+      <a href="#" target="_blank" aria-label="Twitter">
+        <img src="images/twitter.svg" alt="Twitter icon" class="icon" />
+      </a>
+    </div>
+    <p>&copy; <span id="year"></span> Samuel Expósito Ruiz | Spain</p>
+    <p id="lastModified"></p>
+  </footer>
 </body>
 </html>

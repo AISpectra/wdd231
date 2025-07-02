@@ -1,0 +1,16 @@
+@media screen and (min-width: 768px) {
+  nav ul {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  nav ul li {
+    border: none;
+    padding: 0.5rem 1rem;
+  }
+}
