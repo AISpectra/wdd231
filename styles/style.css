@@ -1,4 +1,11 @@
 
+body {
+  background-color: #111;
+  color: white;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
 header {
   display: grid;
   grid-template-columns: 24px auto 44px;
