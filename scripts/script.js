@@ -1,9 +1,16 @@
-const navButton = document.querySelector('#nav-button');
-const navBar = document.querySelector('#nav-bar');  
+document.addEventListener("DOMContentLoaded", () => {
+  const navButton = document.querySelector('#nav-button');
+  const navBar = document.querySelector('#nav-bar');
 
-navButton.addEventListener('click', () => {
-  navButton.classList.toggle('show');
-  navBar.classList.toggle('show'); 
+  if (navButton && navBar) {
+    navButton.addEventListener('click', () => {
+      navButton.classList.toggle('show');
+      navBar.classList.toggle('show');
+    });
+  }
+
+  const lastModified = document.getElementById("lastModified");
+  if (lastModified) {
+    lastModified.textContent = document.lastModified;
+  }
 });
-
-document.getElementById("lastModified").textContent = document.lastModified;

@@ -7,8 +7,9 @@ body {
 }
 
 header {
+  position: relative;
   display: grid;
-  grid-template-columns: 24px auto 44px;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 1rem;
   padding: 1rem;
@@ -17,9 +18,11 @@ header {
 }
 
 
+
 header img {
   width: 40px;
   height: 40px;
+  margin-right: 0.5rem;
 }
 
 
@@ -137,4 +140,12 @@ footer .icon {
 footer .icon:hover {
   transform: scale(1.1);
   filter: brightness(1.4);
+}
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
