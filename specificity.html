@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Specificity Test</title>
+  <style>
+    p {
+      color: green;
+    }
+
+    .highlight {
+      color: blue;
+    }
+
+    #main-paragraph {
+      color: red;
+    }
+
+    .highlight:hover {
+      color: orange !important;
+    }
+  </style>
+</head>
+<body>
+
+  <p id="main-paragraph" class="highlight">Este es un párrafo de prueba.</p>
+
+</body>
+</html>
