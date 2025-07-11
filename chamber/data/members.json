@@ -1,0 +1,60 @@
+{
+  "members": [
+    {
+      "name": "Café Cervantes",
+      "address": "Calle Mayor 25, Alcalá de Henares",
+      "phone": "+34 918 88 00 01",
+      "website": "https://cafecervantes.es",
+      "image": "images/cafe-cervantes.png",
+      "membership": "gold"
+    },
+    {
+      "name": "Librería Complutense",
+      "address": "Plaza San Diego 3, Alcalá de Henares",
+      "phone": "+34 918 88 00 02",
+      "website": "https://libreriacomplutense.es",
+      "image": "images/libreria-complutense.png",
+      "membership": "silver"
+    },
+    {
+      "name": "Tapas del Henares",
+      "address": "Calle Mayor 89, Alcalá de Henares",
+      "phone": "+34 918 88 00 03",
+      "website": "https://tapasdelhenares.es",
+      "image": "images/tapas-henares.png",
+      "membership": "member"
+    },
+    {
+      "name": "Arte y Cultura Tours",
+      "address": "Avenida de Madrid 15, Alcalá de Henares",
+      "phone": "+34 918 88 00 04",
+      "website": "https://arteycultura.es",
+      "image": "images/arte-cultura.png",
+      "membership": "gold"
+    },
+    {
+      "name": "TechAlcalá",
+      "address": "Calle del Tinte 7, Alcalá de Henares",
+      "phone": "+34 918 88 00 05",
+      "website": "https://techalcala.com",
+      "image": "images/tech-alcala.png",
+      "membership": "silver"
+    },
+    {
+      "name": "Floristería Laurel",
+      "address": "Calle Libreros 11, Alcalá de Henares",
+      "phone": "+34 918 88 00 06",
+      "website": "https://floristerialaurel.es",
+      "image": "images/floristeria-laurel.png",
+      "membership": "member"
+    },
+    {
+      "name": "Clínica Dental Cervantina",
+      "address": "Calle Santiago 18, Alcalá de Henares",
+      "phone": "+34 918 88 00 07",
+      "website": "https://dentalcervantina.es",
+      "image": "images/clinica-dental.png",
+      "membership": "gold"
+    }
+  ]
+}

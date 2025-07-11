@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Business directory of the Alcalá de Henares Chamber of Commerce." />
+  <meta name="author" content="Samuel Expósito Ruiz" />
+  <meta property="og:title" content="Alcalá de Henares Chamber Directory" />
+  <meta property="og:description" content="Explore local businesses in Alcalá de Henares." />
+  <meta property="og:image" content="images/social-preview.png" />
+  <meta property="og:url" content="https://your-github-username.github.io/wdd231/chamber/directory.html" />
+
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/styles.css" />
+
+  <title>Directory - Alcalá de Henares Chamber</title>
+</head>
+<body>
+  <header>
+    <h1>Alcalá de Henares Chamber of Commerce</h1>
+    <nav>
+      <button id="menu-toggle">☰</button>
+      <ul id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html" class="active">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="view-toggle">
+      <button id="grid-view">🔲 Grid</button>
+      <button id="list-view">📃 List</button>
+    </section>
+
+    <section id="members-container" class="grid"></section>
+  </main>
+
+  <footer>
+    <p>Contact: info@alcalachamber.org | Plaza Cervantes, 1 - Alcalá de Henares, Spain</p>
+    <p>&copy; <span id="year"></span> | Samuel Expósito Ruiz | WDD 231 | Last updated: <span id="last-modified"></span></p>
+  </footer>
+
+  <script src="scripts/directory.js" defer></script>
+</body>
+</html>

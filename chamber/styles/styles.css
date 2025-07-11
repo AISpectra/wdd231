@@ -1,0 +1,155 @@
+/* === Normalize CSS (puedes usar normalize.css o incluirlo aquí) === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f5f7fa;
+  color: #333;
+  padding: 0 1rem;
+}
+
+header {
+  background-color: #003366;
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a.active {
+  text-decoration: underline;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+/* View Toggle Buttons */
+.view-toggle {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.view-toggle button {
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  border: none;
+  background-color: #003366;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.view-toggle button:hover {
+  background-color: #0055aa;
+}
+
+/* Member Cards - Grid View */
+#members-container.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.member-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.member-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+.member-card h3 {
+  color: #003366;
+  margin: 0.5rem 0;
+}
+
+.member-card p {
+  margin: 0.3rem 0;
+}
+
+/* List View */
+#members-container.list .member-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-align: left;
+}
+
+#members-container.list .member-card img {
+  width: 80px;
+  height: 80px;
+}
+
+/* Membership Badges */
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  border-radius: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.badge.gold {
+  background-color: gold;
+  color: black;
+}
+
+.badge.silver {
+  background-color: silver;
+  color: black;
+}
+
+.badge.member {
+  background-color: #ccc;
+  color: black;
+}
+
+/* Footer */
+footer {
+  margin-top: 3rem;
+  padding: 1rem 0;
+  text-align: center;
+  background-color: #eaeaea;
+  font-size: 0.9rem;
+}
+
+/* Responsive Nav (opcional si haces hamburguesa) */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
