@@ -1,4 +1,4 @@
-/* === Normalize CSS (puedes usar normalize.css o incluirlo aquí) === */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -47,7 +47,7 @@ nav a.active {
   display: none;
 }
 
-/* View Toggle Buttons */
+
 .view-toggle {
   text-align: center;
   margin: 1.5rem 0;
@@ -67,7 +67,7 @@ nav a.active {
   background-color: #0055aa;
 }
 
-/* Member Cards - Grid View */
+
 #members-container.grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -98,7 +98,7 @@ nav a.active {
   margin: 0.3rem 0;
 }
 
-/* List View */
+
 #members-container.list .member-card {
   display: flex;
   align-items: center;
@@ -111,7 +111,7 @@ nav a.active {
   height: 80px;
 }
 
-/* Membership Badges */
+
 .badge {
   display: inline-block;
   padding: 0.25rem 0.75rem;
@@ -137,7 +137,7 @@ nav a.active {
   color: black;
 }
 
-/* Footer */
+
 footer {
   margin-top: 3rem;
   padding: 1rem 0;
@@ -146,10 +146,15 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Responsive Nav (opcional si haces hamburguesa) */
+
 @media (max-width: 600px) {
   nav ul {
     flex-direction: column;
     align-items: center;
   }
 }
+
+#members-container.list .member-card img {
+  display: none;
+}
+
