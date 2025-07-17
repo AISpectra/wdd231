@@ -161,3 +161,141 @@ footer {
 body {
   font-family: 'Roboto', sans-serif;
 }
+
+
+.hero {
+  position: relative;
+  width: 100%;
+  max-height: 400px;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  filter: brightness(70%);
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #ffc107;
+  color: #003366;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.cta-button:hover {
+  background-color: #e0a800;
+}
+
+
+.events, .weather {
+  margin: 2rem auto;
+  max-width: 800px;
+  background: white;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.events ul, .weather ul {
+  margin-top: 0.5rem;
+  padding-left: 1.2rem;
+}
+
+.events h2, .weather h2 {
+  color: #003366;
+  margin-bottom: 0.5rem;
+}
+
+
+.spotlights {
+  margin: 2rem auto;
+  padding: 1rem;
+  max-width: 1000px;
+}
+
+#spotlights-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.spotlight {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 1rem;
+  width: 280px;
+  text-align: center;
+}
+
+.spotlight img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+.spotlight h3 {
+  color: #003366;
+  margin-bottom: 0.3rem;
+}
+
+.spotlight p {
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+}
+
+.spotlight a {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .hero-text {
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .spotlight {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    height: 100vh;
+    background-position: top;
+  }
+
+  .hero-content {
+    padding: 1rem;
+  }
+
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+}

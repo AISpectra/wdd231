@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Welcome to the Alcalá de Henares Chamber of Commerce official site." />
+  <meta name="author" content="Samuel Expósito Ruiz" />
+  <meta property="og:title" content="Alcalá de Henares Chamber of Commerce" />
+  <meta property="og:description" content="Grow your business and connect with our local chamber." />
+  <meta property="og:image" content="https://tu-usuario.github.io/wdd231/chamber/images/social-preview.png" />
+  <meta property="og:url" content="https://your-github-username.github.io/wdd231/chamber/index.html" />
+
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  
+  <title>Alcalá de Henares Chamber of Commerce</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <button id="menu-toggle">☰</button>
+      <ul id="menu">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <img src="images/hero.jpg" alt="View of Alcalá de Henares" loading="lazy" />
+      <div class="hero-text">
+        <h1>Welcome to Alcalá de Henares Chamber</h1>
+        <p>Support local businesses, grow together.</p>
+        <a href="join.html" class="cta-button">Join the Chamber</a>
+      </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="events">
+      <h2>Upcoming Events</h2>
+      <ul>
+        <li><strong>July 25:</strong> Networking Breakfast @ 9AM</li>
+        <li><strong>August 1:</strong> Business Workshop: Digital Marketing</li>
+        <li><strong>August 10:</strong> Chamber Summer Picnic</li>
+      </ul>
+    </section>
+
+    <!-- Weather Section -->
+    <section class="weather">
+      <h2>Current Weather</h2>
+      <div id="weather">
+        <p>Loading weather data...</p>
+      </div>
+    </section>
+
+    <!-- Spotlights Section -->
+    <section class="spotlights">
+      <h2>Business Spotlights</h2>
+      <div id="spotlights-container"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Contact: info@alcalachamber.org | Plaza Cervantes, 1 - Alcalá de Henares, Spain</p>
+    <p>&copy; <span id="year"></span> | Samuel Expósito Ruiz | WDD 231 | Last updated: <span id="last-modified"></span></p>
+  </footer>
+
+  <script src="scripts/weather.js" defer></script>
+  <script src="scripts/spotlights.js" defer></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("last-modified").textContent = document.lastModified;
+  </script>
+</body>
+</html>
