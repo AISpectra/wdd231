@@ -2,7 +2,7 @@ const container = document.getElementById("members-container");
 const gridBtn = document.getElementById("grid-view");
 const listBtn = document.getElementById("list-view");
 
-// Cargar miembros desde JSON
+
 async function loadMembers() {
   try {
     const response = await fetch("data/members.json");
@@ -33,7 +33,7 @@ function displayMembers(members) {
   });
 }
 
-// Cambiar entre vistas
+
 gridBtn.addEventListener("click", () => {
   container.classList.add("grid");
   container.classList.remove("list");
@@ -44,9 +44,9 @@ listBtn.addEventListener("click", () => {
   container.classList.remove("grid");
 });
 
-// Footer: año actual y última modificación
+
 document.getElementById("year").textContent = new Date().getFullYear();
 document.getElementById("last-modified").textContent = document.lastModified;
 
-// Ejecutar
+
 loadMembers();
