@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Join the Alcalá de Henares Chamber of Commerce and connect with local businesses." />
+  <meta name="author" content="Samuel Expósito Ruiz" />
+  <meta property="og:title" content="Join Alcalá Chamber of Commerce" />
+  <meta property="og:description" content="Apply to become a member and enjoy benefits for your organization." />
+  <meta property="og:image" content="https://tu-usuario.github.io/wdd231/chamber/images/social-preview.png" />
+  <meta property="og:url" content="https://your-github-username.github.io/wdd231/chamber/join.html" />
+
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="styles/join.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+
+  <title>Join the Alcalá Chamber</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <button id="menu-toggle">☰</button>
+      <ul id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html" class="active">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Join the Chamber</h1>
+    <div class="form-and-levels"> 
+     <form method="get" action="thankyou.html">
+      <label>
+        First Name:
+        <input type="text" name="fname" required title="First Name" autocomplete="given-name" />
+      </label>
+      <label>
+        Last Name:
+        <input type="text" name="lname" required title="Last Name" autocomplete="family-name" />
+      </label>
+      <label>
+        Title:
+        <input type="text" name="title" title="Organization Title" autocomplete="organization-title" pattern="[A-Za-z\-\s]{7,}" />
+      </label>
+      <label>
+        Email:
+        <input type="email" name="email" required title="Email" autocomplete="email" placeholder="example@mail.com" />
+      </label>
+      <label>
+        Mobile Phone:
+        <input type="tel" name="phone" required title="Phone" autocomplete="tel" />
+      </label>
+      <label>
+        Organization:
+        <input type="text" name="organization" required title="Organization Name" autocomplete="organization" />
+      </label>
+      <label>
+        Membership Level:
+        <select name="membership">
+          <option value="NP">NP Membership</option>
+          <option value="Bronze">Bronze Membership</option>
+          <option value="Silver">Silver Membership</option>
+          <option value="Gold">Gold Membership</option>
+        </select>
+      </label>
+      <label>
+        Organization Description:
+        <textarea name="description" title="Organization Description"></textarea>
+      </label>
+      <input type="hidden" id="timestamp" name="timestamp" />
+      <input type="submit" value="Apply Now" />
+     </form>
+
+     <section class="levels">
+      <div class="card np"><h3>NP Membership</h3><a href="#npModal">More Info</a></div>
+      <div class="card bronze"><h3>Bronze Membership</h3><a href="#bronzeModal">More Info</a></div>
+      <div class="card silver"><h3>Silver Membership</h3><a href="#silverModal">More Info</a></div>
+      <div class="card gold"><h3>Gold Membership</h3><a href="#goldModal">More Info</a></div>
+     </section>
+
+    </div> 
+    <!-- Modals -->
+    <dialog id="npModal" class="modal"><p>No cost. For nonprofits. Basic listing & events access.</p><button onclick="this.parentElement.close()">Close</button></dialog>
+    <dialog id="bronzeModal" class="modal"><p>Standard listing, monthly newsletter mention, 5% event discount.</p><button onclick="this.parentElement.close()">Close</button></dialog>
+    <dialog id="silverModal" class="modal"><p>Premium listing, quarterly feature, 10% event discount.</p><button onclick="this.parentElement.close()">Close</button></dialog>
+    <dialog id="goldModal" class="modal"><p>Homepage spotlight, training sessions, 20% event discount.</p><button onclick="this.parentElement.close()">Close</button></dialog>
+  </main>
+
+  <footer>
+    <p>Contact: info@alcalachamber.org | Plaza Cervantes, 1 - Alcalá de Henares, Spain</p>
+    <p>&copy; <span id="year"></span> | Samuel Expósito Ruiz | WDD 231 | Last updated: <span id="last-modified"></span></p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("last-modified").textContent = document.lastModified;
+    document.getElementById("timestamp").value = new Date().toISOString();
+
+    // Modal triggers
+    document.querySelectorAll(".card a").forEach(link => {
+      link.addEventListener("click", e => {
+        e.preventDefault();
+        const modal = document.querySelector(link.getAttribute("href"));
+        modal.showModal();
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Membership confirmation - Alcalá de Henares Chamber of Commerce" />
+  <meta name="author" content="Samuel Expósito Ruiz" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="styles/join.css" />
+  <style>
+    .thankyou-main {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background-color: white;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .thankyou-main h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .thankyou-main p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    .thankyou-main h2 {
+      margin-bottom: 1rem;
+    }
+
+    .thankyou-main ul {
+      display: inline-block;
+      text-align: left;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    .thankyou-main li {
+      list-style: none;
+      margin: 0.5rem 0;
+      font-size: 1rem;
+    }
+  </style>
+  <title>Thank You - Alcalá Chamber</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <button id="menu-toggle">☰</button>
+      <ul id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html" class="active">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="thankyou-main">
+    <h1>🎉 Thank You for Joining!</h1>
+    <p>We have received your application and are excited to have you in our community.</p>
+
+    <section class="confirmation">
+      <h2>Your Submission Details</h2>
+      <ul id="submission-details">
+        <!-- Form data will be injected here -->
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Contact: info@alcalachamber.org | Plaza Cervantes, 1 - Alcalá de Henares, Spain</p>
+    <p>&copy; <span id="year"></span> | Samuel Expósito Ruiz | WDD 231 | Last updated: <span id="last-modified"></span></p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("last-modified").textContent = document.lastModified;
+
+    const params = new URLSearchParams(window.location.search);
+    const details = document.getElementById("submission-details");
+    const fields = ["fname", "lname", "email", "phone", "organization", "timestamp"];
+
+    fields.forEach(field => {
+      if (params.has(field)) {
+        const li = document.createElement("li");
+        li.innerHTML = `<strong>${field.charAt(0).toUpperCase() + field.slice(1)}:</strong> ${params.get(field)}`;
+        details.appendChild(li);
+      }
+    });
+  </script>
+</body>
+</html>
