@@ -86,7 +86,7 @@
      </section>
 
     </div> 
-    <!-- Modals -->
+    
     <dialog id="npmodal" class="modal"><p>No cost. For nonprofits. Basic listing & events access.</p><button onclick="this.parentElement.close()">Close</button></dialog>
     <dialog id="bronzemodal" class="modal"><p>Standard listing, monthly newsletter mention, 5% event discount.</p><button onclick="this.parentElement.close()">Close</button></dialog>
     <dialog id="silvermodal" class="modal"><p>Premium listing, quarterly feature, 10% event discount.</p><button onclick="this.parentElement.close()">Close</button></dialog>
@@ -98,19 +98,7 @@
     <p>&copy; <span id="year"></span> | Samuel Expósito Ruiz | WDD 231 | Last updated: <span id="last-modified"></span></p>
   </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-    document.getElementById("last-modified").textContent = document.lastModified;
-    document.getElementById("timestamp").value = new Date().toISOString();
+  <script src="scripts/join.js" defer></script>
 
-    // Modal triggers
-    document.querySelectorAll(".card a").forEach(link => {
-      link.addEventListener("click", e => {
-        e.preventDefault();
-        const modal = document.querySelector(link.getAttribute("href"));
-        modal.showModal();
-      });
-    });
-  </script>
 </body>
 </html>
