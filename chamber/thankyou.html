@@ -6,8 +6,8 @@
   <meta name="description" content="Membership confirmation - Alcalá de Henares Chamber of Commerce" />
   <meta name="author" content="Samuel Expósito Ruiz" />
   <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="css/normalize.css" />
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/styles.css" />
   <style>
     .thankyou-main {
       max-width: 800px;
@@ -78,21 +78,6 @@
     <p>&copy; <span id="year"></span> | Samuel Expósito Ruiz | WDD 231 | Last updated: <span id="last-modified"></span></p>
   </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-    document.getElementById("last-modified").textContent = document.lastModified;
-
-    const params = new URLSearchParams(window.location.search);
-    const details = document.getElementById("submission-details");
-    const fields = ["fname", "lname", "email", "phone", "organization", "timestamp"];
-
-    fields.forEach(field => {
-      if (params.has(field)) {
-        const li = document.createElement("li");
-        li.innerHTML = `<strong>${field.charAt(0).toUpperCase() + field.slice(1)}:</strong> ${params.get(field)}`;
-        details.appendChild(li);
-      }
-    });
-  </script>
+  <script src="scripts/thankyou.js" defer></script>
 </body>
 </html>
