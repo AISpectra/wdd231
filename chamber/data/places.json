@@ -1,0 +1,52 @@
+{
+  "places": [
+    {
+      "name": "Calle Mayor",
+      "image": "images/calle.png",
+      "address": "Calle Mayor, Alcalá de Henares",
+      "description": "Historic pedestrian street filled with shops and cafes."
+    },
+    {
+      "name": "Cervantes Birthplace",
+      "image": "images/casa.png",
+      "address": "Calle Mayor, 48",
+      "description": "Museum dedicated to the birthplace of Miguel de Cervantes."
+    },
+    {
+      "name": "University of Alcalá",
+      "image": "images/universidad.png",
+      "address": "Plaza de San Diego",
+      "description": "Renowned university with a beautiful façade and rich history."
+    },
+    {
+      "name": "Corral de Comedias",
+      "image": "images/corral.png",
+      "address": "Plaza de Cervantes, 15",
+      "description": "One of the oldest preserved theaters in Europe."
+    },
+    {
+      "name": "Magisterial Cathedral",
+      "image": "images/catedral.png",
+      "address": "Plaza de los Santos Niños",
+      "description": "A unique cathedral with stunning gothic architecture."
+    },
+    {
+      "name": "Regional Archaeological Museum",
+      "image": "images/museo.png",
+      "address": "Plaza de las Bernardas",
+      "description": "Museum featuring Roman and medieval artifacts."
+    },
+    {
+      "name": "El Val Park",
+      "image": "images/val.png",
+      "address": "Av. del Val",
+      "description": "A large green space with picnic areas and walking paths."
+    },
+    {
+      "name": "Complutum Ruins",
+      "image": "images/complutum.png",
+      "address": "Camino del Juncal",
+      "description": "Ancient Roman city ruins open to visitors."
+    }
+  ]
+}
