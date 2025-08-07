@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Customize Your GoBag</title>
+  <meta name="description" content="Customize your own emergency GoBag checklist." />
+  <meta name="author" content="Samuel Expósito Ruiz" />
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body>
+  <header>
+    <nav>
+        <h1>GoBag Ready</h1>
+        <button id="menuBtn" aria-label="Menu">&#9776;</button>
+        <ul id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="essentials.html">Essentials</a></li>
+        <li><a href="custom.html">Customize</a></li>
+        </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Customize Your GoBag</h2>
+    <form id="bagForm" action="thanks.html" method="get">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="region">Region/Climate:</label>
+      <select id="region" name="region" required>
+        <option value="">Select...</option>
+        <option value="cold">Cold Climate</option>
+        <option value="hot">Hot Climate</option>
+        <option value="flood">Flood Risk</option>
+        <option value="war">Conflict Zone</option>
+      </select>
+
+      <fieldset>
+        <legend>Select your needs:</legend>
+        <label><input type="checkbox" name="needs" value="baby"> Baby Supplies</label>
+        <label><input type="checkbox" name="needs" value="elderly"> Elderly Care</label>
+        <label><input type="checkbox" name="needs" value="pets"> Pets</label>
+      </fieldset>
+
+      <button type="submit">Generate My Checklist</button>
+    </form>
+
+    <!-- Modal -->
+    <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-content">
+        <h3 id="modalTitle">Confirm Submission</h3>
+        <p>Do you want to generate your personalized GoBag checklist?</p>
+        <button id="confirm">Yes</button>
+        <button id="cancel">Cancel</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 GoBag Ready</p>
+    <p><a href="attributions.html">Attributions</a> | <a href="https://your-video-link.com" target="_blank">Project Video</a></p>
+  </footer>
+
+  <script type="module" src="scripts/custom.js"></script>
+</body>
+</html>

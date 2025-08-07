@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GoBag Ready - Be Prepared</title>
+  <meta name="description" content="Learn how to build your perfect emergency GoBag." />
+  <meta name="author" content="Samuel Expósito Ruiz" />
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <meta property="og:title" content="GoBag Ready - Be Prepared">
+  <meta property="og:description" content="Build your emergency backpack step by step.">
+  <meta property="og:image" content="images/gobag-share.jpg">
+  <meta property="og:url" content="https://aispectra.github.io/wdd231/finalproject/index.html">
+</head>
+<body>
+  <header>
+    <h1>GoBag Ready</h1>
+    <nav>
+      <button id="menuBtn" aria-label="Menu">&#9776;</button>
+      <ul id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="essentials.html">Essentials</a></li>
+        <li><a href="custom.html">Customize</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Be Ready for Anything</h2>
+      <p>Learn how to create a GoBag that fits your needs and region.</p>
+      <button id="openModal">Why have a GoBag?</button>
+    </section>
+
+    <section class="intro">
+      <h2>What’s a GoBag?</h2>
+      <p>A GoBag is an emergency backpack with essential items you can grab quickly during a disaster or evacuation.</p>
+    </section>
+
+    <section class="cta">
+      <h2>Start Building Yours</h2>
+      <p>Check our essential list or customize your own.</p>
+      <a href="essentials.html" class="button">View Essentials</a>
+      <a href="custom.html" class="button">Customize</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 GoBag Ready. All rights reserved.</p>
+    <p><a href="attributions.html">Attributions</a> | <a href="https://your-video-link.com" target="_blank">Project Video</a></p>
+  </footer>
+
+  <!-- Modal Structure -->
+  <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-content">
+      <button id="closeModal" aria-label="Close modal">&times;</button>
+      <h2>Why Prepare a GoBag?</h2>
+      <p>Emergencies can strike without warning. A GoBag ensures you have food, water, medicine, and supplies ready to go.</p>
+    </div>
+  </div>
+
+  <script type="module" src="scripts/modal.js"></script>
+</body>
+</html>

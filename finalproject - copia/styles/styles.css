@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #222;
+  padding-top: 80px;
+}
+
+header {
+  background-color: #035f75;
+  color: #fff;
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 1.8rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#menuBtn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  display: none;
+  cursor: pointer;
+}
+
+#navLinks {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+#navLinks li a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+#navLinks li a:hover,
+#navLinks li a.active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+  animation: fadeIn 1s ease;
+}
+
+section, .hero {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  animation: fadeIn 0.8s ease;
+}
+
+.hero {
+  text-align: center;
+  background: #e5f8fc;
+}
+
+button, .btn {
+  background-color: #035f75;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover,
+.btn:hover {
+  background-color: #0487a4;
+  transform: scale(1.03);
+}
+
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #eee;
+  font-size: 0.9rem;
+}
+
+a {
+  color: #035f75;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Essentials Card Style */
+.essential-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.essential-card:hover {
+  transform: scale(1.01);
+}
+
+.essential-card h3 {
+  margin-top: 0;
+}
+
+.essential-card p {
+  margin: 0.3rem 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #menuBtn {
+    display: block;
+  }
+
+  nav {
+    justify-content: space-between;
+  }
+
+  #navLinks {
+    flex-direction: column;
+    display: none;
+    background-color: #035f75;
+    padding: 1rem;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    border-radius: 0 0 0 10px;
+  }
+
+  #navLinks.show {
+    display: flex;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
