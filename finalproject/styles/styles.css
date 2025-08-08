@@ -139,26 +139,89 @@ a:hover {
   margin: 0.3rem 0;
 }
 
+/* Modal Styles */
+/* ===== Modal (limpio y centrado) ===== */
+.modal {
+  /* oculto por defecto */
+  display: none;
+
+  /* overlay a pantalla completa */
+  position: fixed;
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2000;
+
+  /* centrado */
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.show {
+  display: flex; /* se muestra centrado al añadir .show */
+}
+
+.modal-content {
+  background: #fff;
+  width: min(92vw, 560px);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,.3);
+  position: relative;
+  animation: fadeIn 0.3s ease;
+}
+
+#closeModal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #035f75;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
 /* Responsive */
 @media (max-width: 768px) {
+  nav { 
+    justify-content: space-between;
+    position: relative; /* para posicionar #navLinks de forma absoluta respecto al nav */
+  }
+
   #menuBtn {
     display: block;
   }
 
-  nav {
-    justify-content: space-between;
-  }
-
   #navLinks {
-    flex-direction: column;
-    display: none;
-    background-color: #035f75;
-    padding: 1rem;
     position: absolute;
     top: 70px;
-    right: 0;
-    width: 200px;
-    border-radius: 0 0 0 10px;
+    right: 0; /* panel pegado a la derecha */
+    left: auto;
+    width: 220px;
+    background-color: #035f75;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,.15);
+
+    /* reset y layout */
+    display: none;
+    flex-direction: column;
+    align-items: flex-end; /* items alineados al margen derecho */
+    gap: .5rem;
+    padding: 1rem;
+    margin: 0;
+    list-style: none;
+  }
+
+  /* enlaces ocupan línea completa y texto a la derecha */
+  #navLinks a {
+    display: block;
+    width: 100%;
+    text-align: right;
+    padding: .6rem 1rem;
+    border-radius: 6px;
   }
 
   #navLinks.show {
@@ -170,4 +233,22 @@ a:hover {
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;               /* empuja el footer hacia abajo si hay poco contenido */
+}
+
+/* opcional: si el hueco sobre el footer te parece grande, reduce este margin */
+footer {
+  margin-top: 1rem;      /* antes tenías 2rem */
 }

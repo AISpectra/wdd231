@@ -1,24 +1,40 @@
-const openBtn = document.querySelector("#openModal");
-const closeBtn = document.querySelector("#closeModal");
-const modal = document.querySelector("#modal");
+// modal.js
+const modal     = document.getElementById('modal');
+const openBtn   = document.getElementById('openModal');
+const closeBtn  = document.getElementById('closeModal');
+const menuBtn   = document.getElementById('menuBtn');
+const navLinks  = document.getElementById('navLinks');
 
-document.getElementById("menuBtn").addEventListener("click", () => {
-  document.getElementById("navLinks").classList.toggle("show");
+// Hamburguesa
+menuBtn?.addEventListener('click', () => {
+  navLinks?.classList.toggle('show');
 });
 
-openBtn.addEventListener("click", () => {
-  modal.style.display = "block";
-  modal.setAttribute("aria-hidden", "false");
+// Abrir modal
+openBtn?.addEventListener('click', () => {
+  modal?.classList.add('show');
+  modal?.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden'; // evita scroll del fondo
 });
 
-closeBtn.addEventListener("click", () => {
-  modal.style.display = "none";
-  modal.setAttribute("aria-hidden", "true");
+// Función cerrar
+function closeModal() {
+  modal?.classList.remove('show');
+  modal?.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+
+// Cerrar con botón
+closeBtn?.addEventListener('click', closeModal);
+
+// Cerrar clic fuera del cuadro
+modal?.addEventListener('click', (e) => {
+  if (e.target === modal) closeModal();
 });
 
-window.addEventListener("click", (e) => {
-  if (e.target === modal) {
-    modal.style.display = "none";
-    modal.setAttribute("aria-hidden", "true");
+// Cerrar con Escape
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && modal?.classList.contains('show')) {
+    closeModal();
   }
 });
