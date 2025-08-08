@@ -112,14 +112,25 @@ footer {
   font-size: 0.9rem;
 }
 
+/* color de enlace con ratio ≥ 7:1 sobre blanco */
 a {
-  color: #035f75;
+  color: #024f63;          /* ≈7.15:1 con #ffffff -> AAA */
   text-decoration: none;
 }
 
-a:hover {
+a:hover,
+a:focus-visible {
+  color: #012f3a;          /* un poco más oscuro al hover/focus */
   text-decoration: underline;
+  outline: none;           /* quitamos outline por defecto… */
 }
+
+/* …pero dejamos un focus accesible claro */
+a:focus-visible {
+  box-shadow: 0 0 0 3px rgba(1,47,58,.25);
+  border-radius: 4px;
+}
+
 
 /* Essentials Card Style */
 .essential-card {
