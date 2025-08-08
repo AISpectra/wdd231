@@ -81,7 +81,7 @@ section, .hero {
   background: #e5f8fc;
 }
 
-/* Botones reutilizables */
+
 button, .btn {
   background-color: #035f75;
   color: white;
@@ -112,27 +112,27 @@ footer {
   font-size: 0.9rem;
 }
 
-/* color de enlace con ratio ≥ 7:1 sobre blanco */
+
 a {
-  color: #024f63;          /* ≈7.15:1 con #ffffff -> AAA */
+  color: #024f63;          
   text-decoration: none;
 }
 
 a:hover,
 a:focus-visible {
-  color: #012f3a;          /* un poco más oscuro al hover/focus */
+  color: #012f3a;          
   text-decoration: underline;
-  outline: none;           /* quitamos outline por defecto… */
+  outline: none;           
 }
 
-/* …pero dejamos un focus accesible claro */
+
 a:focus-visible {
   box-shadow: 0 0 0 3px rgba(1,47,58,.25);
   border-radius: 4px;
 }
 
 
-/* Essentials Card Style */
+
 .essential-card {
   background-color: #ffffff;
   border-radius: 10px;
@@ -154,7 +154,7 @@ a:focus-visible {
   margin: 0.3rem 0;
 }
 
-/* Modal Styles */
+
 .modal {
   display: none;
   position: fixed;
@@ -191,7 +191,7 @@ a:focus-visible {
   cursor: pointer;
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
   nav { 
     justify-content: space-between;
@@ -233,7 +233,7 @@ a:focus-visible {
   }
 }
 
-/* Animations */
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
@@ -303,7 +303,7 @@ nav {
   box-shadow: 0 4px 10px rgba(0,0,0,0.06);
 }
 
-/* separación horizontal de botones en CTA */
+
 .cta .btn {
   margin-right: 0.75rem;
 }
@@ -312,7 +312,7 @@ nav {
   margin-right: 0;
 }
 
-/* en móviles: botones apilados */
+
 @media (max-width: 480px) {
   .cta .btn {
     display: block;
