@@ -296,3 +296,11 @@ nav {
   box-shadow: 0 4px 10px rgba(0,0,0,0.06);
 }
 
+/* separa los botones en la sección de llamada a la acción */
+.cta a {
+  margin-right: 0.75rem;
+}
+
+.cta a:last-child {
+  margin-right: 0; /* el último no necesita margen */
+}
