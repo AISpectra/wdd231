@@ -1,15 +1,15 @@
-// scripts/thanks.js
+
 (function () {
-  // --- Salidas del resumen
+
   const outName   = document.getElementById('out-name');
   const outRegion = document.getElementById('out-region');
   const outNeeds  = document.getElementById('out-needs');
 
-  // --- Destino de la checklist
+
   const plist     = document.getElementById('plist');
   const itemCount = document.getElementById('item-count');
 
-  // 1) Obtener datos (URL -> fallback localStorage)
+
   const params    = new URLSearchParams(window.location.search);
   const urlName   = (params.get('name') || '').trim();
   const urlRegion = (params.get('region') || '').trim();
@@ -22,19 +22,19 @@
   const region = urlRegion || (ls && ls.region) || '—';
   const needs  = urlNeeds.length ? urlNeeds : ((ls && ls.needs) || []);
 
-  // 2) Mapeo legible
+
   const regionMap = { cold:'Cold Climate', hot:'Hot Climate', flood:'Flood Risk', war:'Conflict Zone' };
   const needMap   = { baby:'Baby Supplies', elderly:'Elderly Care', pets:'Pets' };
 
   const regionLabel = regionMap[region] || region;
   const needsText   = needs.length ? needs.map(n => needMap[n] || n).join(', ') : 'None selected';
 
-  // 3) Pintar resumen
+
   if (outName)   outName.textContent   = name;
   if (outRegion) outRegion.textContent = regionLabel;
   if (outNeeds)  outNeeds.textContent  = needsText;
 
-  // 4) Dataset
+ 
   const baseItems = [
     { name:'Water (2L/person/day)', qty:'min 2 days', category:'Water',   note:'Bottled or sealed' },
     { name:'Non-perishable food',   qty:'6–8 items',  category:'Food',    note:'Cans, bars, nuts' },
@@ -94,7 +94,7 @@
     ],
   };
 
-  // 5) Construir lista (únicos por nombre)
+
   let items = [...baseItems];
   if (addonsByRegion[region]) items = items.concat(addonsByRegion[region]);
   needs.forEach(n => { if (addonsByNeeds[n]) items = items.concat(addonsByNeeds[n]); });
@@ -107,7 +107,7 @@
     return true;
   });
 
-  // 6) Render
+
   if (plist) {
     plist.innerHTML = '';
     unique.forEach(it => {

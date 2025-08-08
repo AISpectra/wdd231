@@ -23,7 +23,7 @@ async function loadEssentials() {
       container.appendChild(card);
     });
 
-    // Guardar en localStorage (ejemplo de preferencia)
+    
     localStorage.setItem("lastVisitEssentials", new Date().toISOString());
 
   } catch (error) {

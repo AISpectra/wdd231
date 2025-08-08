@@ -1,6 +1,6 @@
-// scripts/custom.js
 
-// ===== Nav hamburger =====
+
+
 const menuBtn  = document.getElementById("menuBtn");
 const navLinks = document.getElementById("navLinks");
 
@@ -8,18 +8,18 @@ menuBtn?.addEventListener("click", () => {
   navLinks?.classList.toggle("show");
 });
 
-// ===== Form + Modal =====
+
 const form      = document.getElementById("bagForm");
 const modal     = document.getElementById("modal");
 const confirmBtn = document.getElementById("confirm");
 const cancelBtn  = document.getElementById("cancel");
 
-// Campos para recordar preferencias
+
 const nameInput  = document.getElementById("name");
 const regionSel  = document.getElementById("region");
 const needsBoxes = [...document.querySelectorAll('input[name="needs"]')];
 
-// --- Restaura preferencias guardadas (si existen) ---
+
 (function restorePrefs() {
   try {
     const saved = JSON.parse(localStorage.getItem("gobag-custom") || "{}");
@@ -43,7 +43,7 @@ function savePrefs() {
   );
 }
 
-// --- Helpers abrir/cerrar modal ---
+
 function openModal() {
   modal.classList.remove("hidden");
   modal.classList.add("show");
@@ -56,28 +56,28 @@ function closeModal() {
   modal.setAttribute("aria-hidden", "true");
 }
 
-// Mostrar modal al intentar enviar
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   openModal();
 });
 
-// Confirmar envío
+
 confirmBtn.addEventListener("click", () => {
   savePrefs();
   closeModal();
-  form.submit(); // envía a thanks.html
+  form.submit(); 
 });
 
-// Cancelar
+
 cancelBtn.addEventListener("click", closeModal);
 
-// Cerrar haciendo clic fuera del contenido
+
 modal.addEventListener("click", (e) => {
   if (e.target === modal) closeModal();
 });
 
-// Cerrar con Escape
+
 window.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && modal.classList.contains("show")) {
     closeModal();
