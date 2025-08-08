@@ -252,3 +252,47 @@ main {
 footer {
   margin-top: 1rem;      /* antes tenías 2rem */
 }
+
+.logo {
+  width: 48px;
+  height: auto;
+  margin-right: 0.75rem;
+}
+nav {
+  align-items: center; /* ya definido; mantiene alineación vertical */
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #e5f8fc;
+}
+.hero-image {
+  width: 40%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 10px;
+}
+.hero-text {
+  flex: 1;
+}
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-image {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.intro, .cta {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+}
+
