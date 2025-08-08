@@ -5,12 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Thanks for Submitting!</title>
   <link rel="stylesheet" href="styles/styles.css" />
+  <meta name="description" content="Thanks for submitting your custom GoBag preferences." />
+  <meta name="author" content="Samuel Expósito Ruiz" />
+  <meta property="og:title" content="GoBag Ready - Be Prepared">
+  <meta property="og:description" content="Build your emergency backpack step by step.">
+  <meta property="og:image" content="images/gobag-share.jpg">
 </head>
 <body>
   <main>
-    <h2>Thank you!</h2>
-    <p>Your custom GoBag checklist is being generated. Stay safe!</p>
-    <a href="index.html">← Return to Home</a>
+    <section class="hero">
+      <h2 id="thanks-title">Thank you!</h2>
+      <p id="thanks-desc">Your custom GoBag checklist has been generated.</p>
+
+      <div id="summary" class="essential-card" style="margin-top:1rem;">
+        <h3>Submission Summary</h3>
+        <p><strong>Name:</strong> <span id="out-name">—</span></p>
+        <p><strong>Region:</strong> <span id="out-region">—</span></p>
+        <p><strong>Needs:</strong> <span id="out-needs">—</span></p>
+      </div>
+      <section style="margin-top:1rem;">
+        <h3>Your Personalized Checklist (<span id="item-count">0</span> items)</h3>
+        <div id="plist"></div>
+      </section>
+
+
+      <p style="margin-top:1rem;">
+        <a class="btn" href="index.html">← Return to Home</a>
+      </p>
+    </section>
   </main>
+
+  <script src="scripts/thanks.js" defer></script>
 </body>
 </html>
