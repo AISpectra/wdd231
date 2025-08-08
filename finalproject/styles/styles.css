@@ -321,14 +321,14 @@ nav {
   }
 }
 
-.thankyou.hero {
+.thankyou{
   flex-direction: column;
   align-items: flex-start; 
 }
-.thankyou.hero h2,
-.thankyou.hero p,
-.thankyou.hero .essential-card,
-.thankyou.hero section,
-.thankyou.hero p:last-child {
+.thankyouh2,
+.thankyou p,
+.thankyou .essential-card,
+.thankyou section,
+.thankyou p:last-child {
   margin-bottom: 1rem;
 }
