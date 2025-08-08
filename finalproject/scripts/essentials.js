@@ -7,7 +7,7 @@ document.getElementById("menuBtn").addEventListener("click", () => {
 
 async function loadEssentials() {
   try {
-    const response = await fetch('../data/essentials.json');
+    const response = await fetch('data/essentials.json');
     if (!response.ok) throw new Error('Network error');
     const items = await response.json();
 
