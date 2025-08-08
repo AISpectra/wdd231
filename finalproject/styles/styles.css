@@ -320,3 +320,15 @@ nav {
     margin: 0.5rem 0 0;
   }
 }
+
+.thankyou.hero {
+  flex-direction: column;
+  align-items: flex-start; 
+}
+.thankyou.hero h2,
+.thankyou.hero p,
+.thankyou.hero .essential-card,
+.thankyou.hero section,
+.thankyou.hero p:last-child {
+  margin-bottom: 1rem;
+}
